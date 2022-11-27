@@ -1,0 +1,12 @@
+---
+- name: copy text file
+  template:
+    src: text.j2
+    dest: /tmp/temp
+  tags: hello
+
+- name: copy hostname file
+  template:
+    src: hostname.j2
+    dest: /tmp/temp2
+  tags: hostname
