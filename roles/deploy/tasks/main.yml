@@ -10,3 +10,10 @@
     src: hostname.j2
     dest: /tmp/temp2
   tags: hostname
+
+- name: centos check and create file
+  file:
+    path: "/tmp/this_is_centos"
+    state: touch
+  when: ansible_distribution == "CentOS"
+  tags: check
